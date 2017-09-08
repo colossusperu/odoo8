@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <template id="assets_frontend" name="terminal_punto_venta_temp assets" inherit_id="web.assets_common">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/terminal_punto_venta_temp/static/src/js/models.js"></script>
+                <script type="text/javascript" src="/terminal_punto_venta_temp/static/src/js/screens.js"></script>
+                <script type="text/javascript" src="/terminal_punto_venta_temp/static/src/js/main.js"></script>
+            </xpath>
+        </template>
+	        
+    </data>
+</openerp>

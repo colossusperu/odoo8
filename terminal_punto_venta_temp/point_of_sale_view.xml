@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_pos_config_form_inherit">
+            <field name="name">pos.config.form.view.inherit</field>
+            <field name="model">pos.config</field>
+            <field name="inherit_id" ref="point_of_sale.view_pos_config_form"></field>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='journal_id']" position="attributes">
+            		<attribute name="string">Diario para Factura</attribute>
+            		<attribute name="help">Diario usado para la emisión de Facturas.</attribute>
+            	</xpath>
+            	<xpath expr="//field[@name='group_by']" position="after">
+            		<field name="journal_03_id" widget="selection"></field>
+            	</xpath>
+            	<xpath expr="//field[@name='currency_id']" position="after">
+            		<!-- Se decidió colocar este campo al final para evitar problemas 
+            			 de renderización para cuando se ocualtan campos -->
+            		<field name="journal_temp_id" invisible="1"></field>
+            	</xpath>
+            </field>
+        </record>
+	</data>
+</openerp>
